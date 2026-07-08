@@ -1,8 +1,8 @@
 class Envhub < Formula
   desc "Discover and manage every .env file on your machine"
   homepage "https://github.com/cs4alhaider/EnvHub"
-  url "https://github.com/cs4alhaider/EnvHub/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "0d937041afa684614f1ab7d4ce575b5203e1130e74f9b47177d226c465070be6"
+  url "https://github.com/cs4alhaider/EnvHub/archive/refs/tags/v0.0.1.tar.gz"
+  sha256 "37367431a9665fd53445e813111818ce103252f62b3f0d8f8fdfd6895d68cff4"
   license "GPL-3.0-only"
   head "https://github.com/cs4alhaider/EnvHub.git", branch: "main"
 

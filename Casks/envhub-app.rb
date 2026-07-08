@@ -2,7 +2,7 @@
 # scripts/release.sh) and uploading EnvHub-<version>.zip to the GitHub release —
 # then replace the sha256 below with that zip's hash (`shasum -a 256 EnvHub-0.2.0.zip`).
 cask "envhub-app" do
-  version "0.2.0"
+  version "0.0.1"
   sha256 "0000000000000000000000000000000000000000000000000000000000000000"
 
   url "https://github.com/cs4alhaider/EnvHub/releases/download/v#{version}/EnvHub-#{version}.zip"
