@@ -1,6 +1,6 @@
-# NOTE: activate this after running scripts/release.sh in the EnvHub repo and
-# uploading EnvHub-<version>.zip to the release — then replace the sha256 below
-# with the value the script prints for the app zip.
+# Activate after distributing the app (Xcode → Organizer → Direct Distribution, or
+# scripts/release.sh) and uploading EnvHub-<version>.zip to the GitHub release —
+# then replace the sha256 below with that zip's hash (`shasum -a 256 EnvHub-0.2.0.zip`).
 cask "envhub-app" do
   version "0.2.0"
   sha256 "0000000000000000000000000000000000000000000000000000000000000000"
@@ -10,11 +10,11 @@ cask "envhub-app" do
   desc "Every .env file on your machine, in one window"
   homepage "https://github.com/cs4alhaider/EnvHub"
 
+  # Installing the app also installs the matching CLI.
+  depends_on formula: "cs4alhaider/tap/envhub"
   depends_on macos: ">= :tahoe"
 
   app "EnvHub.app"
-  # The app bundles the CLI; symlink it onto PATH so `brew install --cask` gives both.
-  binary "#{appdir}/EnvHub.app/Contents/Helpers/envhub"
 
   zap trash: [
     "~/Library/Application Support/EnvHub",
